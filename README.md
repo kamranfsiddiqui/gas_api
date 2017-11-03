@@ -7,6 +7,7 @@
   *`google_places`
   
   *`geocoder`
+  
   Add the following to your Gemfile and run 'bundle install'
   `gem 'google_places'
   
@@ -19,7 +20,9 @@
   * `simplecov`
   * `autotest-rails`
   * `factory_bot_rails`
+  
   Add the following to your Gemfile and run 'bundle install'
+  
    `gem 'rspec-rails'
     gem 'faker'
     gem 'simplecov'
