@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171029211816) do
+ActiveRecord::Schema.define(version: 20171103175216) do
 
   create_table "coordinates", force: :cascade do |t|
     t.decimal "lat", precision: 10, scale: 6
@@ -32,15 +32,6 @@ ActiveRecord::Schema.define(version: 20171029211816) do
     t.datetime "updated_at", null: false
     t.integer "coordinates_id"
     t.index ["coordinates_id"], name: "index_gas_stations_on_coordinates_id"
-  end
-
-  create_table "origins", force: :cascade do |t|
-    t.string "street_address"
-    t.string "city"
-    t.string "state"
-    t.string "postal_code"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
   end
 
 end
