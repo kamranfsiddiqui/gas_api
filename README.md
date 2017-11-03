@@ -24,8 +24,12 @@
   Add the following to your Gemfile and run 'bundle install'
   
    `gem 'rspec-rails'
+   
     gem 'faker'
+    
     gem 'simplecov'
+    
     gem 'autotest-rails'
+    
     gem 'factory_bot_rails'`
 
