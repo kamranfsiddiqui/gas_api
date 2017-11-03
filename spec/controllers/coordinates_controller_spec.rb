@@ -4,14 +4,22 @@ require 'spec_helper'
 describe CoordinatesController do
   describe "GET #nearest_gas" do
     before :each do
+      #37.77801, -122.4119076
+
+      # coordinates for 1161 Mission st gotten from manually going on google maps and pressing on the pin
+      #37.778075, -122.412053
       @lat = 37.77801
       @lng = -122.4119076
       @cache_radius = 0.000723  
       @out_of_radius = 0.000732 # a bit more than 0.05 mi so that lat/lng will be outside cache radius
-      @point_params = {lat: @lat, lng: @lng, street_address: "1298 Howard Street", city: "San Francisco", state: "CA", zipcode: "94103"}
+      @point_params = {lat: @lat, lng: @lng, street_address: "1155 Mission St", city: "San Francisco", state: "CA", zipcode: "94103"}
       @station_params = {street_address: "1298 Howard Street", city: "San Francisco", state: "CA", postal_code: "94103"}
       @expected_response = { 
         address: {streetAddress: "1155 Mission St", city: "San Francisco", state: "CA", postal_code: "94103"},
+        nearest_gas_station: {streetAddress: "1298 Howard Street", city: "San Francisco", state: "CA", postal_code: "94103"}
+      }.to_json
+      @expected_response2 = { 
+        address: {streetAddress: "1161 Mission St", city: "San Francisco", state: "CA", postal_code: "94103"},
         nearest_gas_station: {streetAddress: "1298 Howard Street", city: "San Francisco", state: "CA", postal_code: "94103"}
       }.to_json
     end
