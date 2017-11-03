@@ -4,9 +4,9 @@
 * Rails version: 5.1.4
 
 ## Gems needed to run: 
-  *`google_places`
+  `google_places`
   
-  *`geocoder`
+  `geocoder`
   
   Add the following to your Gemfile and run `bundle install`
   
