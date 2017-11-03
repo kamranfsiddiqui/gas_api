@@ -18,8 +18,9 @@ class Coordinate < ApplicationRecord
   after_validation :reverse_geocode
 
   # Takes in a latitude and longitude as decimals.
-  # Returns whether the given coordinate(lat & long) is in the database already
-  # and whether you need to make a call to Google Places API
+  # Returns  a boolean saying whether the given coordinate(lat & long) is in the database already
+  # or if the given coordinate is within 0.05 miles (80 meters) of a point already in the database
+  # then we don't need to make an api call
   def self.cached?(lat, long) 
     given_point = [lat, long]
     nearby_points = Coordinate.near(given_point, 0.05).order("distance")
