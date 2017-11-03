@@ -48,8 +48,8 @@ group :development, :test do
   gem 'faker'
   gem 'simplecov', :require => false
   gem 'autotest-rails'
-  gem 'factory_bot_rails' # if using FactoryGirl
-  gem 'metric_fu'        # collect code metrics
+  gem 'factory_bot_rails'  
+  gem 'metric_fu' 
 end
 
 group :development do
