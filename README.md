@@ -4,12 +4,13 @@
 * Rails version: 5.1.4
 
 ## Gems needed to run: 
-  *`google_places`, 
+  *`google_places`
+  
   *`geocoder`
   Add the following to your Gemfile and run 'bundle install'
   `gem 'google_places'
-   gem 'geocoder' 
-   `
+  
+   gem 'geocoder' `
 
 * How to run the test suite
   To run tests add these gems:
