@@ -8,10 +8,11 @@
   
   *`geocoder`
   
-  Add the following to your Gemfile and run 'bundle install'
+  Add the following to your Gemfile and run `bundle install`
+  
   `gem 'google_places'`
   
-   `gem 'geocoder'`
+  `gem 'geocoder'`
 
 * How to run the test suite
   To run tests add these gems:
