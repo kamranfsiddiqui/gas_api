@@ -10,9 +10,7 @@ class CoordinatesController < ApplicationController
 
       # the call to the Google Places API
       @client = GooglePlaces::Client.new(API_KEY)
-      closest_stations = @client.spots(params[:lat], params[:lng], radius: 50000, types: ['gas_station'], detail: true).sort {
-        |x,y| Geocoder::Calculations.distance_between([params[:lat], params[:lng]], [x.lat, x.lng])<=> Geocoder::Calculations.distance_between([params[:lat], params[:lng]], [y.lat, y.lng])
-      }
+      closest_stations = @client.spots(params[:lat], params[:lng], radius: 50000, types: ['gas_station'], detail: true, rankby: "distance")      
       closest_station = closest_stations[0]
       
       # if the user calls endpoint with invalid lat and long or if no info available from the Google Places API then render status 400
