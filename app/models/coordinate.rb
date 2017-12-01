@@ -12,7 +12,7 @@ class Coordinate < ApplicationRecord
       obj.street_address = geo.address.split(",")[0]
       obj.city = geo.city
       obj.state = geo.state_code
-      obj.zipcode = geo.postal_code
+      obj.postal_code = geo.postal_code
     end
   end
   after_validation :reverse_geocode

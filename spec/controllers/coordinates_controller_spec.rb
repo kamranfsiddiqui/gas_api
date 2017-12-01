@@ -12,7 +12,7 @@ describe CoordinatesController do
       @lng = -122.4119076
       @cache_radius = 0.000723  
       @out_of_radius = 0.000732 # a bit more than 0.05 mi so that lat/lng will be outside cache radius
-      @point_params = {lat: @lat, lng: @lng, street_address: "1155 Mission St", city: "San Francisco", state: "CA", zipcode: "94103"}
+      @point_params = {lat: @lat, lng: @lng, street_address: "1155 Mission St", city: "San Francisco", state: "CA", postal_code: "94103"}
       @station_params = {street_address: "1298 Howard Street", city: "San Francisco", state: "CA", postal_code: "94103"}
       @expected_response = { 
         address: {streetAddress: "1155 Mission St", city: "San Francisco", state: "CA", postal_code: "94103"},

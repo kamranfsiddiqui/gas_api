@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171103175216) do
+ActiveRecord::Schema.define(version: 20171130220925) do
 
   create_table "coordinates", force: :cascade do |t|
     t.decimal "lat", precision: 10, scale: 6
@@ -18,7 +18,7 @@ ActiveRecord::Schema.define(version: 20171103175216) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "street_address"
-    t.string "zipcode"
+    t.string "postal_code"
     t.string "city"
     t.string "state"
   end

@@ -9,6 +9,6 @@ FactoryBot.define do
     f.street_address {Faker::Address.street_address}
     f.city {Faker::Address.city}
     f.state {Faker::Address.state_abbr}
-    f.zipcode {Faker::Address.zip}
+    f.postal_code {Faker::Address.zip}
   end
 end
